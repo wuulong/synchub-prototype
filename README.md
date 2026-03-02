@@ -21,7 +21,7 @@
   - 每位成員在自己的 `workmgr/` 中管理本地資訊，當確認完成且裁決後，才將檔案推送到 `sync/outbox/` 與團隊進行對合。
 
 👉 詳細請見：[架構設計說明 (docs/architecture.md)](docs/architecture.md)
-
+👉 參考文件：[團隊 AI 實驗-頭文件](https://docs.google.com/document/d/1UXJbgGX_w_QkpJzQHmzUAnonDn5zTU89yy8KwbPv-Zo/edit?tab=t.0#heading=h.qvgcsq37rys4)
 ## ⚖️ 運作守則
 
 在虛擬企業中，我們「不靠默契，靠協議」！
