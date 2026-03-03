@@ -15,12 +15,13 @@ events/synchub-prototype/
 │
 ├── members/                     # 👥 成員個人空間 (Individual Contexts)
 │   └── _template/               # 👤 個人環境預設範本
-│       ├── workmgr/             # 🏠 個人的任務與日誌區 (PA Sandbox 操作區)
-│       │   ├── task/            # 個人的任務清單與子任務狀態
-│       │   └── work-logs/       # 個人每日工作日誌 (草稿或內部思考區)
-│       └── sync/                # 🔄 個人對合通訊區 (與 SyncHub 介接處)
-│           ├── inbox/           # 📥 [個人收件匣] 團隊 (SyncHub) 派發的專屬任務、來自團隊 outbox 的廣播，或對合反饋
-│           └── outbox/          # 📤 [個人寄件匣] 裁決後準備提交給團隊 (進入團隊 inbox) 的完成任務報告或重要決策
+│       └── workmgr/             # 🏠 個人的任務與管理區 (PA Sandbox 操作區) 
+│           ├── roadmap/         # 個人戰略藍圖
+│           ├── task/            # 個人的任務清單
+│           ├── task-reports/    # 個人任務報告
+│           ├── work-logs/       # 個人每日工作日誌
+│           ├── inbox/           # 📥 [個人收件匣] 團隊 (SyncHub) 派發的專屬任務、廣播或反饋
+│           └── outbox/          # 📤 [個人寄件匣] 裁決後準備提交給團隊 (進入團隊 inbox) 的完成任務報告或決策
 │
 ├── docs/                        # 📚 專案說明與架構
 │   ├── architecture.md          # 說明 SyncHub 非同步對合 (Inbox/Outbox) 運作流程與系統設計
@@ -41,7 +42,7 @@ events/synchub-prototype/
 
 ### 1. 碎形對稱性 (Fractal Symmetry)
 本架構貫徹「企業是由個體組成的碎形」概念。
-團隊層級擁有 `workmgr/`（包含 roadmap, task, work-logs），而個人層級 (`members/.../workmgr/`) 也擁有相同的結構。
+團隊層級擁有 `workmgr/`（包含 roadmap, task, task-reports, work-logs, inbox, outbox），而個人層級也擁有完全相同的 1:1 鏡像結構。
 這種對稱性讓個人 AI 沙盒 (PA Sandbox) 運作的資料，能以相同的邏輯被團隊 AI (SyncHub) 讀取與整合。
 
 ### 2. 非同步對合 (Inbox / Outbox 機制)
